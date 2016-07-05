@@ -7,5 +7,10 @@ describe('Triangles') do
       test_triangle = Triangles.new(2,2,8)
       expect(test_triangle.triangle_type()).to (eq("not a triangle"))
     end
+
+    it('returns scalene if no sides are equal') do
+      test_triangle = Triangles.new(2,3,4)
+      expect(test_triangle.triangle_type()).to (eq('scalene'))
+    end
   end
 end
