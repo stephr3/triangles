@@ -11,7 +11,6 @@ get('/triangles') do
   a = params.fetch('side_a')
   b = params.fetch('side_b')
   c = params.fetch('side_c')
-  triangle = Triangles.new(a, b, c)
-  @results = triangle.triangle_type()
+  @triangle = Triangles.new(a, b, c)  
   erb(:triangles)
 end
